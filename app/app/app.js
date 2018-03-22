@@ -31,7 +31,10 @@ myApp.config(function($stateProvider, $urlRouterProvider, $locationProvider){
       })
       .state('family', {
         url: '/family-involvement',
-        templateUrl: 'views/family.html'
+        templateUrl: 'views/family.html',
+        params: {
+          anchor: null
+        }
       })
       .state('faq', {
         url: '/faq',
@@ -135,7 +138,7 @@ myApp.config(function($stateProvider, $urlRouterProvider, $locationProvider){
 myApp.controller('MainController', ['$scope', '$transitions','$http', '$anchorScroll', '$location', '$stateParams', '$timeout', function ($scope, $transitions, $http, $anchorScroll, $location, $stateParams, $timeout)  {
   console.log('inside main controller');
   
-  $scope.affiliate = "Lanier";
+  $scope.affiliate = "LehighValley";
   $scope.zoomLevel = 1;
   $scope.tab = 1;
   $scope.formData = {};
@@ -261,9 +264,9 @@ myApp.controller('MainController', ['$scope', '$transitions','$http', '$anchorSc
     console.log('submitForm, formData is', $scope.formData);
     $scope.loading = true;
     $http.post('/sendmail', {
-      from: '"ITNLanier Web User" <donotreply@itnamerica.com>',
+      from: '"ITNLehighValley Web User" <donotreply@itnamerica.com>',
       to: 'itnamerica2018@gmail.com',
-      subject: "ITNLanier Contact Form Submitted",
+      subject: "ITNLehighValley Contact Form Submitted",
       text: $scope.formData,
       html: "<p><strong>Name:</strong>: " + $scope.formData.name + "</p>\n" +
       "<p><strong>Email:</strong>: " + $scope.formData.email + "</p>\n " +
@@ -286,17 +289,17 @@ myApp.controller('MainController', ['$scope', '$transitions','$http', '$anchorSc
         $(document).ready(function(){
           $('#pdfVersion').css('display', 'block');
         })
-        $scope.formSubject = 'ITNLanier - New volunteer application received';
+        $scope.formSubject = 'ITNLehighValley - New volunteer application received';
         $scope.generateMultiPagePDF();
     } else if (formType === 'membership') {
         $(document).ready(function(){
           $('#pdfVersion').css('display', 'block');
         })
         $scope.showPdf = true;
-        $scope.formSubject = 'ITNLanier - New membership application received';
+        $scope.formSubject = 'ITNLehighValley - New membership application received';
         $scope.generateMultiPagePDF();
     } else if (formType === 'nonrider') {
-        $scope.formSubject = 'ITNLanier - Non-Rider application Form submitted';
+        $scope.formSubject = 'ITNLehighValley - Non-Rider application Form submitted';
         $scope.generatePDF();
     } 
   }
@@ -315,7 +318,7 @@ myApp.controller('MainController', ['$scope', '$transitions','$http', '$anchorSc
         console.log('data is ', data);
         $scope.dataPDF = data;
         $http.post('/sendmail', {
-          from: '"ITNLanier Web User" <donotreply@itnamerica.com>',
+          from: '"ITNLehighValley Web User" <donotreply@itnamerica.com>',
           to: 'itnamerica2018@gmail.com',
           subject: $scope.formSubject,
           text: $scope.formData,
@@ -343,7 +346,7 @@ myApp.controller('MainController', ['$scope', '$transitions','$http', '$anchorSc
         console.log('data is ', data);
         $scope.dataPDF = data;
         $http.post('/sendmail', {
-          from: '"ITNLanier Web User" <donotreply@itnamerica.com>',
+          from: '"ITNLehighValley Web User" <donotreply@itnamerica.com>',
           to: 'itnamerica2018@gmail.com',
           subject: $scope.formSubject,
           text: $scope.formData,
