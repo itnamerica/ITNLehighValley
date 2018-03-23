@@ -62,7 +62,10 @@ myApp.config(function($stateProvider, $urlRouterProvider, $locationProvider){
       })
       .state('pay-online', {
         url: '/pay-online',
-        templateUrl: 'views/pay-online.html'
+        templateUrl: 'views/pay-online.html',
+        params: {
+          anchor: null
+        }
       })
       .state('rider-stories', {
         url: '/rider-stories',
