@@ -447,7 +447,7 @@ nav .dropdown-menu li.divider{
   width: 250px;
   margin-left: 65%;
 }
-.news .news-content ul{
+.news .news-content ul, .news .news-content p{
   margin-top: 50px;
   list-style-type: none;
   color: #b95856;
