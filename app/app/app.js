@@ -50,7 +50,10 @@ myApp.config(function($stateProvider, $urlRouterProvider, $locationProvider){
       })
       .state('news', {
         url: '/news',
-        templateUrl: 'views/news.html'
+        templateUrl: 'views/news.html',
+        params: {
+          anchor: null
+        }
       })
       .state('non-rider-member', {
         url: '/non-rider-member',
@@ -199,9 +202,11 @@ myApp.controller('MainController', ['$scope', '$transitions','$http', '$anchorSc
   }
   
   $scope.resetFormData = function(){
-    $scope.formData = {};
-    $scope.serverMessage = "";
-  }
+      $scope.formData = {};
+      $scope.serverMessage = "";
+      $scope.loading = false;
+      $scope.tab = 1;
+    }
 
   $scope.nextTabMemberApp = function(prev){
     $(window).scrollTop(50);

@@ -7,7 +7,7 @@
     <div class="jumbotron section" style="background: #c7dfe4">
       
       <div class="container">
-        <h3>Want to learn more about ITN<em>{{affiliate}}</em>? Have questions or comments? Use the form below, or call us at (610) 419-1645, fax us at (610) 571-3357, or visit us at 35 E. Elizabeth Ave., Suite 20A, Bethlehem, PA 18018</h3>
+        <h3>Want to learn more about ITN<em>{{affiliate}}</em>? Have questions or comments? Use the form below, call us at (610) 419-1645, fax us at (610) 571-3357, or visit us at 35 E. Elizabeth Ave., Suite 20A, Bethlehem, PA 18018</h3>
         <hr align="center">
         <div class="col-sm-12">
             <div class="form-area" style="background: #c7dfe4;border:none"> 
@@ -55,6 +55,9 @@
               </form>
             </div>
           </div>
+          <p ng-if="loading"><em>Loading. Please wait</em></p>
+          <p style="color:red; margin-top:50px"><strong>{{serverMessage}}</strong></p>
+          
         </div>
       
     </div><!--jumbo-->
