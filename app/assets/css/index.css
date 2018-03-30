@@ -414,6 +414,16 @@ nav .dropdown-menu li.divider{
   margin: 100px auto 20px auto;
 }
 
+.service-map {
+  text-align:center;
+  padding:5% 10%;
+  background: #519ba826;
+  border-radius: 10px;
+  font-size:25px;
+}
+.service-map ul li{
+  margin-top:10px;
+}
 
 .news .first-hero {
   background-image: url('../images/dark/news-aa.jpg');
