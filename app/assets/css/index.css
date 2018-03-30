@@ -1104,14 +1104,14 @@ nav .dropdown-menu li.divider{
   align-items:center;
 }
 .family .text-carousel2 {
-  margin-top: 100px;
+  margin-top: 150px;
 }
 .family .text-carousel p {
   color:#399eaa;
   font-weight:bold;
   font-size: 25px;
   width: 60%;
-  margin-left:4%;
+  margin-left:6%;
 }
 .family .text-carousel img {
   position:absolute;
@@ -1738,8 +1738,8 @@ h2,h3 {line-height:1.7}
 }
 .carousel-wrap2 {
   background-image: url('../images/backgrounds/gift-certificate2.png');
-  background-size: 95% 500px;
-  height: 500px;
+  background-size: 93% 700px;
+  height: 650px;
 }
 .slick-slide {
   width: 60%;
@@ -1813,6 +1813,12 @@ h2,h3 {line-height:1.7}
   }
 }
 
+@media(max-width: 850px) {
+  .family .container {
+    margin-bottom: 120px !important;
+  }
+  .family .text-carousel p {width:95%}
+}
 
 /* MOBILE */
 
@@ -1946,7 +1952,7 @@ h2,h3 {line-height:1.7}
     width:100%;
   }
   .family .text-carousel2 { 
-    margin-top:10px;
+    margin-top:150px;
   }
   .family .carousel .col-xs-offset-3 {
     margin-left:2% !important;
